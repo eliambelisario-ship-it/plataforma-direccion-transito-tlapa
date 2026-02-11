@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>License Verification</title>
+    <title>License Management System</title>
+    <meta charset="utf-8">
 </head>
 <body>
-    <h1>License Verification Page</h1>
-    <p>Current Date and Time (UTC): 2026-02-11 05:27:24</p>
-    <p>Current User's Login: eliambelisario-ship-it</p>
+    <h1>License Management System</h1>
+
+    <h2>Create License</h2>
+    <form id="createLicense">
+        <label for="licenseName">License Name:</label><br>
+        <input type="text" id="licenseName" name="licenseName" required><br>
+        <input type="submit" value="Create License">
+    </form>
+
+    <h2>Verify License</h2>
+    <form id="verifyLicense">
+        <label for="licenseKey">License Key:</label><br>
+        <input type="text" id="licenseKey" name="licenseKey" required><br>
+        <input type="submit" value="Verify License">
+    </form>
+
+    <script>
+        document.getElementById('createLicense').onsubmit = function(event) {
+            event.preventDefault(); 
+            alert('License Created!');
+            // Add further implementation for license creation here
+        };
+
+        document.getElementById('verifyLicense').onsubmit = function(event) {
+            event.preventDefault(); 
+            alert('License Verified!');
+            // Add further implementation for license verification here
+        };
+    </script>
 </body>
 </html>
