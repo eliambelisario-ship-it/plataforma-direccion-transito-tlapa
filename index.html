@@ -1,1 +1,46 @@
-<!-- Updated License Creation Form -->\n<form action="/create-license" method="post">\n    <label for="name">Name:</label>\n    <input type="text" id="name" name="name">\n    <label for="passport">Passport:</label>\n    <input type="text" id="passport" name="passport">\n    <label for="photo">Photo:</label>\n    <input type="file" id="photo" name="photo">\n    <input type="submit" value="Create License">\n</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving License Management System</title>
+</head>
+<body>
+    <h1>Driving License Management System</h1>
+    <form id="licenseForm">
+        <fieldset>
+            <legend>Driver Information</legend>
+            <label for="driverName">Name:</label>
+            <input type="text" id="driverName" name="driverName" required>
+            <br>
+            <label for="driverID">Driver ID:</label>
+            <input type="text" id="driverID" name="driverID" required>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Vehicle Classes</legend>
+            <label for="vehicleClass">Select Vehicle Class:</label>
+            <select id="vehicleClass" name="vehicleClass">
+                <option value="motorcycle">Motorcycle</option>
+                <option value="car">Car</option>
+                <option value="truck">Truck</option>
+                <option value="bus">Bus</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Medical Requirements</legend>
+            <label for="medicalCondition">Medical Condition:</label>
+            <input type="text" id="medicalCondition" name="medicalCondition">
+            <br>
+            <label for="medicalFile">Upload Medical File:</label>
+            <input type="file" id="medicalFile" name="medicalFile">
+        </fieldset>
+        <fieldset>
+            <legend>Photo Upload</legend>
+            <label for="driverPhoto">Upload Driver Photo:</label>
+            <input type="file" id="driverPhoto" name="driverPhoto" required>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
